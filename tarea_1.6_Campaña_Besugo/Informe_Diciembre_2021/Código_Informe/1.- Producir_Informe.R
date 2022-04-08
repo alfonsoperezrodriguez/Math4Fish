@@ -3,8 +3,13 @@
 install.packages("tinytex")
 tinytex::install_tinytex()
 
+library(icesTAF)
+
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getwd()
+
+mkdir("output/figuras")
+mkdir("output/tablas")
 
 # Producir el informe
 rmarkdown::render(
